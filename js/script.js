@@ -12,7 +12,7 @@ $(document).ready(function(){
   		loop: true,
   		startDelay: 1000,
   		showCursor: false,
-  		fadeOut: true,
+  		fadeOut: true
 	};
 
 	var typed = new Typed('.typed', options);
