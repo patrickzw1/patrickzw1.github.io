@@ -56,5 +56,17 @@ $(document).ready(function(){
 		}
 	});
 
-	
+	// active fancybox
+	// ps: fancybox and isotope need purchase if project go commercial
+	$("[data-fancybox]").fancybox();
+
+	$(".items").isotope({
+		filter: '*',
+		animationOptions: {
+			duration: 1500,
+			easing: 'linear',
+			queue: false
+		}
+	})
+
 });
