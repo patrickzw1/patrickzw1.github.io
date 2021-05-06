@@ -95,7 +95,7 @@ $(document).ready(function(){
 		e.preventDefault();
 		var targetElement = $(this).attr("href");
 		var targetPosition = $(targetElement).offset().top;
-		$("html, body").animate({scrollTop: targetPosition - 60}, "fast");
+		$("html, body").animate({scrollTop: targetPosition - 68}, "slow");
 	});
 
 	const nav = $("#navigation");
