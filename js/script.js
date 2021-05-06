@@ -1,3 +1,18 @@
+$(window).on("load", function(){
+	$(".loader .inner").fadeOut(500, function(){
+		$(".loader").fadeOut(750);
+	});
+
+	$(".items").isotope({
+		filter: '*',
+		animationOptions: {
+			duration: 1500,
+			easing: 'linear',
+			queue: false
+		}
+	});
+});
+
 $(document).ready(function(){
 
 	// activing superslides for top image to slide
@@ -60,15 +75,6 @@ $(document).ready(function(){
 	// ps: fancybox and isotope need purchase if project go commercial
 	$("[data-fancybox]").fancybox();
 
-	$(".items").isotope({
-		filter: '*',
-		animationOptions: {
-			duration: 1500,
-			easing: 'linear',
-			queue: false
-		}
-	});
-
 	$("#filters a").click(function(){
 		$("#filters .current").removeClass("current");
 		$(this).addClass("current");
@@ -85,4 +91,28 @@ $(document).ready(function(){
 		return false;
 	});
 
+	//this will move slow at first and then fast which is not good.
+	$("#navigation a").click(function(e){
+		e.preventDefault();
+		var targetElement = $(this).attr("href");
+		var targetPosition = $(targetElement).offset().top;
+		$("html, body").animate({scrollTop: targetPosition - 50}, "fast");
+	});
+
+	const nav = $("#navigation");
+	const navTop =  nav.offset().top;
+
+	$(window).on("scroll", stickyNavigation);
+
+	function stickyNavigation(){
+		var body = $("body");
+		if ($(window).scrollTop() >= navTop){
+			body.css("padding-top", nav.outerHeight() + "px");
+			body.addClass("fixedNav");
+		}
+		else{
+			body.css("padding-top", 0);
+			body.removeClass("fixedNav");
+		}
+	};
 });
