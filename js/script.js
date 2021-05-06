@@ -91,12 +91,11 @@ $(document).ready(function(){
 		return false;
 	});
 
-	//this will move slow at first and then fast which is not good.
 	$("#navigation a").click(function(e){
 		e.preventDefault();
 		var targetElement = $(this).attr("href");
 		var targetPosition = $(targetElement).offset().top;
-		$("html, body").animate({scrollTop: targetPosition - 50}, "fast");
+		$("html, body").animate({scrollTop: targetPosition - 60}, "fast");
 	});
 
 	const nav = $("#navigation");
