@@ -60,8 +60,17 @@ body {
 	font-size: 25px;
 }
 
+.aboutSection{
+	padding: 50px 0;
+}
+
+.aboutImage{
+	max-width: 100%;
+}
+
 .skillsSection,
 .contactSection{
+	padding: 5%;
 	background-color: #e74c3c;
 	color: #fff;
 }
@@ -69,6 +78,10 @@ body {
 .skill{
 	margin-left: 25px;
 	text-align: center;
+}
+
+.skillHeading{
+	padding-bottom: 30px;
 }
 
 .chart{
@@ -94,6 +107,10 @@ body {
 
 .chart .percent:after{
 	content: "%";
+}
+
+.contactSection{
+	padding:10px;
 }
 
 .contactSection .subHeading{
@@ -125,7 +142,7 @@ body {
 	text-align: center;
 	width: 100%;
 	padding-top:30px;
-	padding-bottom: 10px;
+	padding-bottom: 20px;
 }
 
 .filter{
