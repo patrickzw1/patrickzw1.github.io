@@ -1,52 +1,32 @@
 <!DOCTYPE html>
-
-<style type="text/css">
-    /* don't remove. */
-    .page404-cover {
-        height: 88vh;  /*页面高度*/
-    }
-
-    #svgContainer {
-      width: 100%;
-      height: 100%;
-      background-color: white;
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      margin: auto;
-    }
-
-    header .brand-logo .logo-span {
-      color: #222;
-    }
- 
-    header .nav-menu li i {
-      color: #222;
-    }
- 
-    header .nav-menu li span {
-      color: #222;
-    }
- 
-    header .button-collapse i {
-      color: #222;
-</style>
- 
-<script type="text/javascript" src="<%- theme.Script.my404bodymoving %>"></script>
-<script type="text/javascript" src="<%- theme.Script.my404data %>"></script>
- 
-<div class="bg-cover pd-header page404-cover">
-    <div id="svgContainer"></div>
- 
-    <script type="text/javascript">
-        var svgContainer = document.getElementById('svgContainer');
-        var animItem = bodymovin.loadAnimation({
-          wrapper: svgContainer,
-          animType: 'svg',
-          loop: true,
-          animationData: JSON.parse(animationData)
-        });
-    </script>
-</div>
+<html lang="zh-cn">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="Cache-Control" content="no-transform">
+        <meta http-equiv="Cache-Control" content="no-siteapp">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, shrink-to-fit=no">
+        <meta name="referrer" content="origin">
+        <title>404 未找到页面</title>
+        <link type="image/x-icon" rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/first19326/cdn@master/static/image/website/logo.png">
+        <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/gh/first19326/cdn@master/static/font/Poppins.css">
+        <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/gh/first19326/cdn@master/static/css/404.css">
+        <script type="text/javascript">
+            function reload() {
+                window.location.reload(true);
+            }
+        </script>
+    </head>
+    <body>
+        <div class="error-page">
+            <div class="content">
+                <h1 data-text="404">404</h1>
+                <h4 data-text="哎呀！页面找不到了">哎呀！页面找不到了</h4>
+                <p>抱歉，您要访问的页面不存在。</p>
+                <div class="buttons">
+                    <a href="javascript:;" onclick="reload();">刷新页面</a>
+                    <a href="https://patrickzw1.github.io/" target="_self">返回首页</a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

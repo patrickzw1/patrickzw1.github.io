@@ -106,4 +106,4 @@ theme: LiveForCode
 deploy:
   type: git
   repo: https://github.com/patrickzw1/patrickzw1.github.io.git
-  branch: master
+  branch: main
